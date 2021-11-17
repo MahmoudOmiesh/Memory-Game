@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/8dbdbf8886.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="style.css" />
+		<script src="js/main.js" type="module"></script>
+		<title>Memeory Game</title>
+	</head>
+	<body class="config-state">
+		<section class="config bg-neutral-100 flow">
+			<div class="config__theme">
+				<h3 class="config__title text-primary-600 fs-300 capitalize">
+					select theme
+				</h3>
+				<div class="config__buttons fs-400">
+					<button
+						class="btn btn-accent active"
+						data-config-btn
+						data-category="theme"
+					>
+						numbers
+					</button>
+					<button class="btn btn-accent" data-config-btn data-category="theme">
+						icons
+					</button>
+				</div>
+			</div>
+			<div class="config__players">
+				<h3 class="config__title text-primary-600 fs-300 capitalize">
+					number of players
+				</h3>
+				<div class="config__buttons fs-400">
+					<button
+						class="btn btn-accent active"
+						data-config-btn
+						data-category="player"
+					>
+						1
+					</button>
+					<button class="btn btn-accent" data-config-btn data-category="player">
+						2
+					</button>
+					<button class="btn btn-accent" data-config-btn data-category="player">
+						3
+					</button>
+					<button class="btn btn-accent" data-config-btn data-category="player">
+						4
+					</button>
+				</div>
+			</div>
+			<div class="config__grid">
+				<h3 class="config__title text-primary-600 fs-300 capitalize">
+					grid size
+				</h3>
+				<div class="config__buttons fs-400">
+					<button
+						class="btn btn-accent active"
+						data-config-btn
+						data-category="size"
+					>
+						4x4
+					</button>
+					<button class="btn btn-accent" data-config-btn data-category="size">
+						6x6
+					</button>
+				</div>
+			</div>
+			<button class="btn btn-primary fs-300" data-start-btn>start game</button>
+		</section>
+
+		<section class="game">
+			<header class="header">
+				<img src="assets/logo.svg" alt="Memory" class="header__logo" />
+
+				<div class="header__buttons">
+					<button class="btn btn-primary fs-300">Restart</button>
+					<button class="btn btn-accent fs-300">New Game</button>
+				</div>
+			</header>
+
+			<main class="grid-wrapper">
+				<div class="grid"></div>
+			</main>
+
+			<div class="info">
+				<div class="info__card bg-primary-100">
+					<p class="info__title text-primary-600 fs-100">Time</p>
+					<p class="info__value text-primary-200 fs-300" data-time>0:00</p>
+				</div>
+				<div class="info__card bg-primary-100">
+					<p class="info__title text-primary-600 fs-100">Moves</p>
+					<p class="info__value text-primary-200 fs-300" data-moves>0</p>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

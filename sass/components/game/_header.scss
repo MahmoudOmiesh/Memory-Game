@@ -1,0 +1,14 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2em 0;
+	max-width: 70vw;
+	margin: 0 auto;
+
+	&__buttons {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+	}
+}

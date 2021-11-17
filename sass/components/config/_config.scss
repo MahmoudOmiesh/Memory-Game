@@ -1,0 +1,20 @@
+.config {
+	--gap: 2rem;
+	border-radius: 0.35em;
+	width: 600px;
+	padding: 3em;
+
+	&__buttons {
+		display: grid;
+		grid-auto-flow: column;
+		gap: 0.85em;
+	}
+
+	&__title {
+		margin-bottom: 0.35em;
+	}
+
+	.btn-primary {
+		width: 100%;
+	}
+}

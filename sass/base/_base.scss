@@ -1,0 +1,36 @@
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+	font-family: var(--ff-main);
+
+	&.config-state {
+		background: hsl(var(--clr-primary-300));
+		display: grid;
+		place-items: center;
+
+		.game {
+			display: none;
+		}
+	}
+
+	&.game-state {
+		.game {
+			display: block;
+		}
+		.config {
+			display: none;
+		}
+	}
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+
+.flow > * + * {
+	margin-top: var(--gap, 1rem);
+}

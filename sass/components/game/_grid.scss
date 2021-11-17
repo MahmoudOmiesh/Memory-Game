@@ -1,0 +1,44 @@
+.grid-wrapper {
+	display: grid;
+	place-items: center;
+	margin: 7rem 0;
+}
+
+.grid {
+	display: grid;
+	gap: 1em;
+
+	&.four {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+	&.six {
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+	}
+
+	&-item {
+		background-color: hsl(var(--clr-primary-200));
+		border-radius: 50%;
+		width: 110px;
+		aspect-ratio: 1;
+		display: grid;
+		font-size: 3rem;
+		place-items: center;
+		font-weight: 700;
+		cursor: pointer;
+		user-select: none;
+		transition: background-color 170ms ease-in-out, font-size 170ms ease-in-out;
+
+		&.chosen {
+			background-color: hsl(var(--clr-primary-400));
+			pointer-events: none;
+		}
+
+		&.paired {
+			cursor: initial;
+			background-color: hsl(var(--clr-primary-200));
+			pointer-events: none;
+		}
+	}
+}

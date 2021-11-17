@@ -1,0 +1,32 @@
+:root {
+	@each $category, $values in $colors {
+		@each $weight, $value in $values {
+			--clr-#{$category}-#{$weight}: #{$value};
+		}
+	}
+
+	@each $category, $value in $font-families {
+		--ff-#{$category}: '#{$value}', sans-serif;
+	}
+
+	@each $weight, $size in $font-sizes {
+		--fs-#{$weight}: #{$size};
+	}
+}
+
+@each $category, $values in $colors {
+	@each $weight, $value in $values {
+		.text-#{$category}-#{$weight} {
+			color: hsl(var(--clr-#{$category}-#{$weight}));
+		}
+		.bg-#{$category}-#{$weight} {
+			background-color: hsl(var(--clr-#{$category}-#{$weight}));
+		}
+	}
+}
+
+@each $weight, $size in $font-sizes {
+	.fs-#{$weight} {
+		font-size: var(--fs-#{$weight});
+	}
+}
